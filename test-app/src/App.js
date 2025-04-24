@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
   const [quote, setQuote] = useState("");
@@ -11,9 +12,12 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <h1>Random Quote</h1>
-      <p>{quote}</p>
+    <div className="app-container">
+      <h1 className="title">Quote of the Day</h1>
+      <button className="quote-button" onClick={() => window.location.reload()}>
+        Get Quote
+      </button>
+      <p className="quote-text">{quote}</p>
     </div>
   );
 }
