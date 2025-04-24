@@ -4,7 +4,7 @@ function App() {
   const [quote, setQuote] = useState("");
 
   useEffect(() => {
-    fetch("https://flask-backend-waqq.onrender.com/api/quote")
+    fetch("https://flask-backend-wagq.onrender.com/api/quote")
       .then((res) => res.json())
       .then((data) => setQuote(data.quote))
       .catch((err) => console.error("Error fetching quote:", err));
