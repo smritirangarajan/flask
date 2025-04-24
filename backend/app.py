@@ -4,7 +4,8 @@ import random
 import os
 
 app = Flask(__name__)
-CORS(app)  # Enables CORS for all routes
+
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 quotes = [
     "Believe in yourself.",
